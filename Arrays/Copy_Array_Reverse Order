@@ -1,0 +1,22 @@
+#include<stdio.h>
+void copy_reverse_order(int*,int*);
+int main()
+{
+int array1[5]={1,2,3,4,5},array2[5];
+copy_reverse_order(&array1[4],array2);
+	
+	for(int i=0;i<5;i++)
+	{
+		printf("%d",array2[i]);
+	}
+}
+
+void copy_reverse_order(int*pointer1,int*pointer2)
+{
+	for(int i=0;i<5;i++)
+	{
+		*pointer2=*pointer1;
+		pointer2++;
+		pointer1--;
+	}
+}
